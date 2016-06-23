@@ -112,6 +112,7 @@ switch(process.env.npm_lifecycle_event) {
         });
         config.plugins.push(
             new webpack.optimize.UglifyJsPlugin({
+                comments: false,
                 minimize: true,
                 compress: {
                     warnings: false
