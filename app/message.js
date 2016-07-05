@@ -1,5 +1,9 @@
 export default class Message {
+
     getMessage() {
-        return 'Hello world';
+
+        return 'Hello world?';
+
     }
+
 }
