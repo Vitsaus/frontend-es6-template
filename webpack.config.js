@@ -104,7 +104,10 @@ switch(process.env.npm_lifecycle_event) {
         break;
     case 'build':
         config = merge(common, {
-            devtool: 'eval-source-map'
+            devtool: 'eval-source-map',
+            entry: {
+                app: './app/main.js'
+            }
         });
         config.plugins.push(
             new webpack.DefinePlugin({
@@ -116,7 +119,10 @@ switch(process.env.npm_lifecycle_event) {
         break;
     case 'build-min':
         config = merge(common, {
-            devtool: 'eval-source-map'
+            devtool: 'eval-source-map',
+            entry: {
+                app: './app/main.js'
+            }
         });
         config.plugins.push(
             new webpack.optimize.UglifyJsPlugin({
