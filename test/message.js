@@ -1,4 +1,4 @@
-import Message from '../app/message.js';
+import Message from '../app/src/message.js';
 
 describe('message', () => {
 
@@ -6,7 +6,7 @@ describe('message', () => {
 
         let message = new Message();
 
-        expect(message.getMessage()).to.equal('Hello world');
+        expect(message.getMessage()).to.equal('Hello world?');
 
     });
 
