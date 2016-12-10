@@ -1,4 +1,6 @@
-import Message from './message.js';
+import './styles/main.scss';
+
+import Message from './src/message.js';
 
 const message = new Message();
 

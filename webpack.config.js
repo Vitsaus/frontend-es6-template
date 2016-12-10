@@ -31,6 +31,10 @@ var common = {
                 exclude: /node_modules/,
                 test: /\.jsx?$/
             },
+            {
+                  test: /\.scss$/,
+                  loaders: ['style-loader', 'css-loader', 'sass-loader']
+            },
             { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'postcss-loader') },
             { test: /\.json$/, loader: 'json'},
             { test: /\.mp4/, loader: 'url?limit=500&mimetype=video/mp4&name=./videos/[name].[ext]' },
