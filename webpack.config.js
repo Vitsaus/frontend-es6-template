@@ -12,7 +12,7 @@ var common = {
     entry: {
         app: [
             'webpack-hot-middleware/client',
-            './app/main.js'
+            './app/client.js'
         ]
     },
     output: {
