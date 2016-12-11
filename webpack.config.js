@@ -11,7 +11,6 @@ var config;
 var common = {
     entry: {
         app: [
-            'webpack-hot-middleware/client',
             './app/client.js'
         ]
     },
@@ -37,11 +36,11 @@ var common = {
             },
             { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'postcss-loader') },
             { test: /\.json$/, loader: 'json'},
-            { test: /\.mp4/, loader: 'url?limit=500&mimetype=video/mp4&name=./videos/[name].[ext]' },
-            { test: /\.svg/, loader: 'url?limit=500&mimetype=image/svg+xml&name=./images/[name].[ext]' },
-            { test: /\.png$/, loader: 'url?limit=500&mimetype=image/png&name=./images/[name].[ext]' },
-            { test: /\.jpg/, loader: 'url?limit=500&mimetype=image/jpeg&name=./images/[name].[ext]' },
-            { test: /\.gif/, loader: 'url?limit=500&mimetype=image/gif&name=./images/[name].[ext]' },
+            { test: /\.mp4/, loader: 'url?limit=5000&mimetype=video/mp4&name=./videos/[name].[ext]' },
+            { test: /\.svg/, loader: 'url?limit=5000&mimetype=image/svg+xml&name=./images/[name].[ext]' },
+            { test: /\.png$/, loader: 'url?limit=5000&mimetype=image/png&name=./images/[name].[ext]' },
+            { test: /\.jpg/, loader: 'url?limit=5000&mimetype=image/jpeg&name=./images/[name].[ext]' },
+            { test: /\.gif/, loader: 'url?limit=5000&mimetype=image/gif&name=./images/[name].[ext]' },
             { test: /\.(otf|eot|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url?limit=1000&name=./fonts/[name].[ext]' }
         ],
     },
@@ -88,7 +87,7 @@ switch(process.env.npm_lifecycle_event) {
                 port: 4000,
                 contentBase: 'build/',
                 historyApiFallback: true,
-                hot: true,
+                hot: false,
                 inline: true
             },
             devtool: 'source-map'
