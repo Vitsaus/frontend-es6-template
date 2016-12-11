@@ -1,7 +1,8 @@
 @import "~susy/sass/susy";
 @import "./reset";
 
-// padding, border etc do should not count for box width and height
+// padding etc do should not count for box width and height
+// @see https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 html {
   box-sizing: border-box;
 }
