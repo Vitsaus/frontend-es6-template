@@ -60,7 +60,8 @@ var common = {
         }),
         new HtmlWebpackPlugin({
             template: 'html!./app/index.html',
-            inject: 'body'
+            inject: 'body',
+            hash: true
         })
     ],
     postcss: function () {
